@@ -59,10 +59,12 @@ For this project, I will use the following technologies:
 
 # Build phase
 
-We'll create a "mini-project" folder and move around inside it using the commands below:
+We'll create a "mini-project" folder, move around inside it and create the Dokerfile using the commands below 
 
-'''
-mkdir mini-projet
-cd mini-projet
-'''
++ mkdir mini-projet
++ cd mini-projet
++ touch Dockerfile
+
+
+
 
