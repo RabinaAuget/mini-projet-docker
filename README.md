@@ -33,24 +33,26 @@ The application is "student_list" and comprises two modules:
 + The second module is a web application written in HTML + PHP that allows the end user to obtain a list of students.
 
 And here are the application files:
-student_age.py: contains the API source code in Python
-student_age.json: contains the student's name and age in JSON format
-Requirements.txt: contains all packages to be installed to run the application
-You need to update the following line before running the website container so that api_ip_or_name and port match your deployment.
-index.php: PHP page where the end user will be logged in to interact with the service to list students with their ages. 
+
++ student_age.py: contains the API source code in Python
++ student_age.json: contains the student's name and age in JSON format
++ Requirements.txt: contains all packages to be installed to run the application
++ index.php: PHP page where the end user will be logged in to interact with the service to list students with their ages. 
 
 # My role
 
 Our task will be to create the following files according to the source files and instructions communicated by the development team:
-Dockerfile: the file that will be used to build the API image
-docker-compose.yml: to launch the application (API and Frontend)
-docker-compose-registry.yml: to create a private registry where we'll store our docker images, and a web interface that will allow us to manage the registry from a browser.
+
++ Dockerfile: the file that will be used to build the API image
++ docker-compose.yml: to launch the application (API and Frontend)
++ docker-compose-registry.yml: to create a private registry where we'll store our docker images, and a web interface that will allow us to manage the registry from a browser.
 
 # Infrastructure:
 
 For this project, I will use the following technologies:
-. Physical host: Windows 11
-. Virtualbox 7.0
-. Centos Stream 9
-. Docker version 26.1.1 build 4cf5afa
-. Docker Compose version v2.7.0
+
++ Physical host: Windows 11
++ Virtualbox 7.0
++ Centos Stream 9
++ Docker version 26.1.1 build 4cf5afa
++ Docker Compose version v2.7.0
