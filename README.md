@@ -64,3 +64,8 @@ For this project, I will use the following technologies:
    + mkdir mini-projet
    + cd mini-projet
    + touch Dockerfile
+
+2. Creating the Dockerfile with the command: touch Dockerfile
+3. Build the image from Dockerfile
+![docker build](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/cdeccc79-fddd-4091-a90a-52d9e5781a0a)
+
