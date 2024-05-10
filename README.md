@@ -29,8 +29,8 @@ So, I'm going to show you the contents of a very basic application that displays
 
 The application is "student_list" and comprises two modules:
 
-## the first module is a REST API (with basic authentication required) that sends the student's wish list based on a JSON file.
-## The second module is a web application written in HTML + PHP that allows the end user to obtain a list of students.
++ the first module is a REST API (with basic authentication required) that sends the student's wish list based on a JSON file.
++ The second module is a web application written in HTML + PHP that allows the end user to obtain a list of students.
 
 And here are the application files:
 student_age.py: contains the API source code in Python
