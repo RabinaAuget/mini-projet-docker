@@ -56,3 +56,13 @@ For this project, I will use the following technologies:
 + Centos Stream 9
 + Docker version 26.1.1 build 4cf5afa
 + Docker Compose version v2.7.0
+
+# Build phase
+
+We'll create a "mini-project" folder and move around inside it using the commands below:
+
+'''
+mkdir mini-projet
+cd mini-projet
+'''
+
