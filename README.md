@@ -61,10 +61,6 @@ For this project, I will use the following technologies:
 
 1. We'll create a "mini-project" folder, move around inside it and create the Dokerfile using the commands below 
 
-+ mkdir mini-projet
-+ cd mini-projet
-+ touch Dockerfile
-
-
-
-
+   + mkdir mini-projet
+   + cd mini-projet
+   + touch Dockerfile
