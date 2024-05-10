@@ -7,7 +7,7 @@ Surname : Rabina
 
 For Eazytraining's 19th DevOps Bootcamp
 
-Period : May-June-July
+Period : May-June-July-2024
 
 Thursday the 09th, May 2024
 
@@ -59,7 +59,7 @@ For this project, I will use the following technologies:
 
 # Build phase
 
-We'll create a "mini-project" folder, move around inside it and create the Dokerfile using the commands below 
+1. We'll create a "mini-project" folder, move around inside it and create the Dokerfile using the commands below 
 
 + mkdir mini-projet
 + cd mini-projet
