@@ -96,6 +96,9 @@ Note that we can remove containers or images easily by indicating only the first
 
 ![Capture d'écran 2024-05-10 201515](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/a10c0a19-d650-44e3-a6a6-240c697d4739)
 
+Unfortunately here, I have two different tags of the image, that's why it displays that the image is untagged. I can't delete it outright because I'm on a limited connection.
+And I can't completely delete the image in question because it's still going to be useful for the rest of the project.
+
 # Infrastructure As Code
 
 1. After deleting the container and image, we created the docker-compose.yml file (you'll find it in the repository), which we'll use to deploy/manage/bind together the frontend in an API-dependent way.
