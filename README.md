@@ -14,7 +14,7 @@ Thursday the 09th, May 2024
 LinkedIn : www.linkedin.com/in/auget-rabina-61663314a
 
 
-#CONTEXT
+# CONTEXT
 
 The project aims to develop an adaptable and easily deployable microservices application, with the emphasis on maximum automation.
 
