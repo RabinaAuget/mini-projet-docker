@@ -1,7 +1,19 @@
 version: '3.8'
 
 services:
-  website:
+  pozos_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pozos_api
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./student-list/simple_api/student_age.json:/data/student_age.json
+    networks:
+      - pozos_app_network
+
+  pozos_web:
     image: php:apache
     container_name: pozos_web
     depends_on:
@@ -14,19 +26,7 @@ services:
       USERNAME: toto
       PASSWORD: python
     networks:
-      - pozos_network
-
-  pozos_api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: pozos_api
-    ports:
-      - 5000:5000
-    volumes:
-      - ./student-list/simple_api/student_age.json:/data/student_age.json
-    networks:
-      - pozos_network
+      - pozos_app_network
 
 networks:
-  pozos_network:
+  pozos_app_network:
