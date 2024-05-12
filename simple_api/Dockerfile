@@ -10,19 +10,20 @@ RUN DEBIAN_FRONTEND=noninteractive apt -o Acquire::Check-Valid-Until=false updat
 #Persistent data
 VOLUME /data
 
-#Code source add from github
-RUN git clone https://github.com/diranetafen/student-list.git /data
+#Cleaning the directory before cloning
+RUN rm -Rf /data/*
 
+#Definition of the work directory
 WORKDIR /data
 
-#copy of the needed package in the requirements.txt
-COPY /data/student-list/simple_api/requirements.txt /data/requirements.txt
+#Code source add from github
+RUN git clone https://github.com/diranetafen/student-list.git
+
+#Installation launch
+RUN pip3 install -r /data/student-list/simple_api/requirements.txt
 
 #API Port
 EXPOSE 5000
 
-#Installation launch
-RUN pip3 install -r /data/requirements.txt
-
 #running student_age.py
-CMD [ "python3", "/data/simple_api/student_age.py" ]
+CMD [ "python3", "/data/student-list/simple_api/student_age.py" ]
