@@ -79,16 +79,11 @@ For this project, I will use the following technologies:
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/57c8ea6a-7f18-4deb-ad22-bdc637d4dd51)
 
-6. Now, let's confirm that the API is working. But first, we need to change the IP of the url on line 29 of website/index.php so that it points to to localhost.
-   Otherwise, our request will return an error.
-
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/3110ce43-2af4-4810-878c-437f42cb4c63)
-
-7. We can make a request to the container from the physical host, specifying the user name and password supplied by the development team.
+6. Now, let's confirm that the API is working.We can make a request to the container from the physical host, specifying the user name and password supplied by the development team.
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/b0cb07c6-9e06-4177-b49f-6d8bd91fb64d)
 
-8. We can now move on to creating the docker compose file to deploy the API and Frontend. To start afresh, we'll delete the container we've created.
+7. We can now move on to creating the docker compose file to deploy the API and Frontend. To start afresh, we'll delete the container we've created.
 
 Note that we can remove containers or images easily by indicating only the first three characters of the ID.
 
