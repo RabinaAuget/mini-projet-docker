@@ -1,21 +1,20 @@
 version: '3.8'
 
-
 name: pozos_registry
 services:
     registry_server:
-        container_name: registry_pozos
+        container_name: registry_server
         image: registry:2
         restart: always
         environment:
             REGISTRY_STORAGE_DELETE_ENABLED: 'true'
             DELETE_IMAGES: 'true'
         ports:
-            - 5000:5000
+            - 5500:5000
         volumes:
             - ./registry:/var/lib/registry
         networks:
-            - pozos_network
+            - pozos_registry_network
 
     registry_ui:
         container_name: registry_ui
@@ -32,6 +31,6 @@ services:
         volumes:
             - ${PWD}/ui/:/data
         networks:
-            - pozos_network
+            - pozos_registry_network
 networks:
-    pozos_network:
+    pozos_registry_network:
