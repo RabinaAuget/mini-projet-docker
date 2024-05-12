@@ -69,32 +69,32 @@ For this project, I will use the following technologies:
 
 3. Build the image from Dockerfile
 
-![docker build](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/cdeccc79-fddd-4091-a90a-52d9e5781a0a)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/96514830-28b1-4178-9a24-8ac30042d309)
 
 4. We're now going to start the docker container from the image we've just created on port 5000:
 
-![Capture d'écran 2024-05-10 194754](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/1abd3c99-71f3-45f0-8a15-b751178ead18)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/1ef7f21c-d910-41a0-bfbf-cfdae7f9bd9d)
 
 5. Let's check that the container has been launched:
 
-![docker ps after docker run Dockerfile](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/e2804206-eae5-4d42-8ea3-f4d43787c60a)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/57c8ea6a-7f18-4deb-ad22-bdc637d4dd51)
 
 6. Now, let's confirm that the API is working. But first, we need to change the IP of the url on line 29 of website/index.php so that it points to to localhost.
    Otherwise, our request will return an error.
 
-![Capture d'écran 2024-05-10 200516](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/a443084a-3d90-4fc1-9e70-b7204ffefdb6)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/3110ce43-2af4-4810-878c-437f42cb4c63)
 
-7. We can make a request to the container, specifying the user name and password supplied by the development team.
+7. We can make a request to the container from the physical host, specifying the user name and password supplied by the development team.
 
-![curl after docker run](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/ab72302d-299c-48cf-be01-d7a09151e130)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/b0cb07c6-9e06-4177-b49f-6d8bd91fb64d)
 
 8. We can now move on to creating the docker compose file to deploy the API and Frontend. To start afresh, we'll delete the container we've created.
 
 Note that we can remove containers or images easily by indicating only the first three characters of the ID.
 
-![Capture d'écran 2024-05-10 195835](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/7f1abac3-be94-4166-8d52-7c286a619517)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/181e2536-c46f-4cf6-9e9e-49fb93c966f5)
 
-![Capture d'écran 2024-05-10 201515](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/a10c0a19-d650-44e3-a6a6-240c697d4739)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/d55393d5-b6f7-400f-9849-8e24f17b7778)
 
 Unfortunately here, I have two different tags of the image, that's why it displays that the image is untagged. I can't delete it outright because I'm on a limited connection.
 And I can't completely delete the image in question because it's still going to be useful for the rest of the project.
@@ -104,14 +104,14 @@ And I can't completely delete the image in question because it's still going to 
 1. After deleting the container and image, we created the docker-compose.yml file (you'll find it in the repository), which we'll use to deploy/manage/bind together the frontend in an API-dependent way.
 Let's launch it:
 
-![docker-compose up API et frontend](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/dce082ed-c24e-467b-8bb1-7699d122a53e)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/13722b3f-1caa-431e-8749-3f97ef759311)
 
 Here we can see that the API and Frontend containers have been created, as well as the mini-project_pozos_network we declared in the docker-compose file.
 The -d option is used to launch containers in the background.
 
 2. Let's check that the containers have been launched using the "docker ps" command:
 
-![Capture d'écran 2024-05-10 202653](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/55cba70d-e460-4097-a526-9184656176d8)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/a224f559-c95d-4c7b-aafe-761523e44d40)
 
 We can see that containers are running and the frontend is listening on port 80.
 
@@ -123,51 +123,53 @@ So, whatever the IP of the container, the API will always be accessible.
 4. The application works correctly. You may have noticed that my container is listening on port 80 while my browser is making a request on port 8081.
 This is because I'm using virtualbox to virtualize my docker host, so I have to use NAT to access it from my physical host.
 
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/b3c123ce-9a3e-449b-93ca-2d8f24032821)
+
 ![image](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/4760b7ef-0f0e-4cea-94b8-4dcccc4cefb2)
 
 Now, the application is working properly, we can stop the containers using the docker-compose down command.
 
-![Capture d'écran 2024-05-10 203109](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/1d11fb88-34e5-4ff7-bc5a-0fd6c77eac7f)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/c2f89037-e9c0-46ee-b732-5f4716b6152f)
 
 # Private registry docker
 
 1. The docker-compose-registry.yml file has now been created. As before, we'll launch the registry and user interface containers with the "docker-compose up -d" command.
 
-![docker-compose up registry et ui](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/11d155d1-6dc1-4ef7-938d-96e43e35208f)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/f9846732-0b0b-4dbf-95fb-5b345c825442)
 
 2. Let's check that the containers have been launched:
 
-![docker-compse ps after docker compose up regitry et ui](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/e7995c70-0260-4cfc-aa3f-af74a450bf31)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/cf7f8410-2018-4123-b06d-c4c6349eed51)
 
 3. We can also see with "docker log" to confirm that the UI has been launched:
 
-![docker log ui](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/b7363bc6-8a0d-425d-b8ad-52e9176ad547)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/a25b7c39-f7e6-49d9-83bb-575cfd419489)
 
 4. Let's check from a browser that the UI is accessible:
 
-![image](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/97e4e3fb-b054-42d1-aa0e-fae9ff7c9fe1)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/bc71c870-a0a4-49c9-82c2-72b115e93f61)
 
 5. We can now push our images into the registry. First, we need to consult the list of images with the "docker images" command to find out which image we're going to push so that we can tag it.
 
-![Capture d'écran 2024-05-10 210000](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/7bbcdc76-d97b-42a4-bfcd-b1716ddc2027)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/4fb8f53b-09cc-4f58-a8cc-2e3e6de68271)
 
 6. Then tag the images like this:
 
-![Capture d'écran 2024-05-10 210241](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/028655f5-9506-4fc9-8114-43b5fcd41350)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/d5d59d36-bf68-450f-8acc-b8d60d111ce0)
 
 7. Let's check that the images have been tagged:
 
-![Capture d'écran 2024-05-10 210324](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/e7a97524-2bc5-4714-b516-8502852125e1)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/6b001a45-a397-4982-8388-75dc980f37a0)
 
 We can see that image names are now prefixed with "localhost:5000".
 
-8. We can now push images via docker push like this:
+8. We can now push images via docker push like this. We can see here that I already have some of the image's layers in the register, as I'd already done some testing.
 
-![docker push](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/2c2eab38-cbc1-43ab-bf50-d114092c9745)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/dfc85b99-f8ee-4f09-9266-d0b96a062e50)
 
 9. Now we can see from the browser that the images have been pushed:
 
-![Browser access after docker compose up registry ](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/af5ca790-b95d-48b2-bac8-668b6abb0a71)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/edab2823-5c80-42eb-a83e-96ffde11a459)
 
 # Conclusion
 
