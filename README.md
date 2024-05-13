@@ -101,14 +101,14 @@ And I can't completely delete the image in question because it's still going to 
 1. After deleting the container and image, we created the docker-compose.yml file (you'll find it in the repository), which we'll use to deploy/manage/bind together the frontend in an API-dependent way.
 Let's launch it:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/13722b3f-1caa-431e-8749-3f97ef759311)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/befb5c1d-4dde-4f50-9dae-23fe648a5c72)
 
 Here we can see that the API and Frontend containers have been created, as well as the mini-project_pozos_network we declared in the docker-compose file.
 The -d option is used to launch containers in the background.
 
 2. Let's check that the containers have been launched using the "docker ps" command:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/a224f559-c95d-4c7b-aafe-761523e44d40)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/edaae54e-7963-4041-beed-f4d76ab5d657)
 
 We can see that containers are running and the frontend is listening on port 80.
 
@@ -120,13 +120,11 @@ So, whatever the IP of the container, the API will always be accessible.
 4. The application works correctly. You may have noticed that my container is listening on port 80 while my browser is making a request on port 8081.
 This is because I'm using virtualbox to virtualize my docker host, so I have to use NAT to access it from my physical host.
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/b3c123ce-9a3e-449b-93ca-2d8f24032821)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/7b2fbe23-810d-4e38-983f-030ed50a41cc)
 
 ![image](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/4760b7ef-0f0e-4cea-94b8-4dcccc4cefb2)
 
-Now, the application is working properly, we can stop the containers using the docker-compose down command.
-
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/c2f89037-e9c0-46ee-b732-5f4716b6152f)
+The application is working properly.
 
 # Private registry docker
 
