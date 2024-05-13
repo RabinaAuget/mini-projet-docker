@@ -128,7 +128,7 @@ Go to virtual machine configuration > Network > Advanced > Port forwarding:
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/e619ecfe-1b9c-4d5f-823b-8b050b8232ee)
 
-This will allow us to access the containeuriser application website from our physical host.
+This will allow us to access the containerised application website from our physical host.
 
 ![image](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/4760b7ef-0f0e-4cea-94b8-4dcccc4cefb2)
 
@@ -176,7 +176,13 @@ We can see that image names are now prefixed with "localhost:5000".
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/be4077c0-a564-4e8b-afb7-16c4f3c650c4)
 
-9. Now we can see from the browser that the images have been pushed:
+9. Now we can see from the browser that the images have been pushed.
+
+But first, we need to add port forwarding in the virtual machine configuration to access the containerised UI from our physical host. To do this, go to virtual machine configuration > Network > Port forwarding:
+
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/f3e7ebe9-b306-452a-9fd4-b733d38bb328)
+
+The registry and the UI are working properly.
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/8777f093-8d72-47fc-b600-aa084e9aa245)
 
