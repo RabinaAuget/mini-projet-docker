@@ -69,27 +69,29 @@ For this project, I will use the following technologies:
 
 3. Build the image from Dockerfile
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/96514830-28b1-4178-9a24-8ac30042d309)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/786f637d-ccff-4016-a824-117f5cd83f1f)
 
-4. We're now going to start the docker container from the image we've just created on port 5000:
+4.Let's check that the image has been created correctly:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/1ef7f21c-d910-41a0-bfbf-cfdae7f9bd9d)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/f45f4904-bb04-4055-b117-36410a972dc5)
 
-5. Let's check that the container has been launched:
+5. We're now going to start the docker container from the image we've just created on port 5000:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/57c8ea6a-7f18-4deb-ad22-bdc637d4dd51)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/112c543b-e653-4dfc-9f65-9709bfc7b1cb)
 
-6. Now, let's confirm that the API is working.We can make a request to the container from the physical host, specifying the user name and password supplied by the development team.
+6. Let's check that the container has been launched:
+
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/77c0a7f5-04b4-4b85-9d91-f2067bd2f8a9)
+
+7. Now, let's confirm that the API is working.We can make a request to the container from the physical host, specifying the user name and password supplied by the development team.
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/b0cb07c6-9e06-4177-b49f-6d8bd91fb64d)
 
-7. We can now move on to creating the docker compose file to deploy the API and Frontend. To start afresh, we'll delete the container we've created.
+8. We can now move on to creating the docker compose file to deploy the API and Frontend. To start afresh, we'll delete the container we've created.
 
 Note that we can remove containers or images easily by indicating only the first three characters of the ID.
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/181e2536-c46f-4cf6-9e9e-49fb93c966f5)
-
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/d55393d5-b6f7-400f-9849-8e24f17b7778)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/c109768a-9f4c-4078-b34c-a178ab8600a5)
 
 Unfortunately here, I have two different tags of the image, that's why it displays that the image is untagged. I can't delete it outright because I'm on a limited connection.
 And I can't completely delete the image in question because it's still going to be useful for the rest of the project.
