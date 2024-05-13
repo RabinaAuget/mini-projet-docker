@@ -81,7 +81,7 @@ For this project, I will use the following technologies:
 
 6. Let's check that the container has been launched:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/77c0a7f5-04b4-4b85-9d91-f2067bd2f8a9)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/076cf729-750e-4bc8-b914-3ed103e42367)
 
 7. Now, let's confirm that the API is working.We can make a request to the container from the physical host, specifying the user name and password supplied by the development team.
 
