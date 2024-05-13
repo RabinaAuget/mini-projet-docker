@@ -1,5 +1,6 @@
 version: '3.8'
 
+
 name: pozos_registry
 services:
     registry_server:
@@ -25,9 +26,7 @@ services:
         ports:
             - 81:8080
         environment:
-            REGISTRY_HOST: 'registry_server:5000'
             REGISTRY_URL: 'http://registry_server:5000'
-            IGNORE_INSECURE_HTTPS: 'true'
         volumes:
             - ${PWD}/ui/:/data
         networks:
