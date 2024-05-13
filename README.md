@@ -108,7 +108,7 @@ The -d option is used to launch containers in the background.
 
 2. Let's check that the containers have been launched using the "docker ps" command:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/acd4935e-6984-4f6c-9cb3-fe056eb2ffd1)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/f4bc44e7-335f-4715-85a1-758de787949f)
 
 We can see that containers are running and the frontend is listening on port 80.
 
