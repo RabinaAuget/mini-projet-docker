@@ -122,6 +122,14 @@ This is because I'm using virtualbox to virtualize my docker host, so I have to 
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/7b2fbe23-810d-4e38-983f-030ed50a41cc)
 
+5. Since my docker is in a virtual machine on virtualbox, I have to do a NAT before I can view the website from my physical host.
+
+Go to virtual machine configuration > Network > Advanced > Port forwarding:
+
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/e619ecfe-1b9c-4d5f-823b-8b050b8232ee)
+
+This will allow us to access the containeuriser application website from our physical host.
+
 ![image](https://github.com/RabinaAuget/mini-projet-docker/assets/61904489/4760b7ef-0f0e-4cea-94b8-4dcccc4cefb2)
 
 The application is working properly.
