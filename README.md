@@ -101,14 +101,14 @@ And I can't completely delete the image in question because it's still going to 
 1. After deleting the container and image, we created the docker-compose.yml file (you'll find it in the repository), which we'll use to deploy/manage/bind together the frontend in an API-dependent way.
 Let's launch it:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/befb5c1d-4dde-4f50-9dae-23fe648a5c72)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/c5057c53-cebb-4385-8ca1-b7ab76b3445c)
 
 Here we can see that the API and Frontend containers have been created, as well as the mini-project_pozos_network we declared in the docker-compose file.
 The -d option is used to launch containers in the background.
 
 2. Let's check that the containers have been launched using the "docker ps" command:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/edaae54e-7963-4041-beed-f4d76ab5d657)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/acd4935e-6984-4f6c-9cb3-fe056eb2ffd1)
 
 We can see that containers are running and the frontend is listening on port 80.
 
@@ -120,7 +120,7 @@ So, whatever the IP of the container, the API will always be accessible.
 4. The application works correctly. You may have noticed that my container is listening on port 80 while my browser is making a request on port 8081.
 This is because I'm using virtualbox to virtualize my docker host, so I have to use NAT to access it from my physical host.
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/7b2fbe23-810d-4e38-983f-030ed50a41cc)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/6aff7b16-5fb0-4479-b3cc-3623b473390d)
 
 5. Since my docker is in a virtual machine on virtualbox, I have to do a NAT before I can view the website from my physical host.
 
