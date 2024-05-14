@@ -9,7 +9,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./student-list/website:/var/www/html
+      - ./website:/var/www/html
     environment:
       USERNAME: toto
       PASSWORD: python
