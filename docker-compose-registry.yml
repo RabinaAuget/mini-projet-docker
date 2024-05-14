@@ -1,35 +1,46 @@
 version: '3.8'
 
-
-name: pozos_registry
 services:
-    registry_server:
-        container_name: registry_server
-        image: registry:2
-        restart: always
-        environment:
-            REGISTRY_STORAGE_DELETE_ENABLED: 'true'
-            DELETE_IMAGES: 'true'
-        ports:
-            - 5500:5000
-        volumes:
-            - ./registry:/var/lib/registry
-        networks:
-            - pozos_registry_network
+  registry_ui:
+    image: joxit/docker-registry-ui:main
+    container_name: registry_ui
+    restart: always
+    depends_on:
+      - registry_server
+    ports:
+      - 81:80
+    environment:
+      - SINGLE_REGISTRY=true
+      - REGISTRY_TITLE=Pozos Docker Registry
+      - DELETE_IMAGES=true
+      - SHOW_CONTENT_DIGEST=true
+      - NGINX_PROXY_PASS_URL=http://registry_server:5000/v2
+      - SHOW_CATALOG_NB_TAGS=true
+      - CATALOG_MIN_BRANCHES=1
+      - CATALOG_MAX_BRANCHES=1
+      - TAGLIST_PAGE_SIZE=100
+      - REGISTRY_SECURED=false
+      - CATALOG_ELEMENTS_LIMIT=1000
+    networks:
+      - pozos_registry_network
 
-    registry_ui:
-        container_name: registry_ui
-        image: descartesresearch/dockerregistryui
-        restart: always
-        links:
-            - registry_server
-        ports:
-            - 81:8080
-        environment:
-            REGISTRY_URL: 'http://registry_server:5000'
-        volumes:
-            - ${PWD}/ui/:/data
-        networks:
-            - pozos_registry_network
+  registry_server:
+    image: registry:2
+    container_name: registry_server
+    restart: always
+    ports:
+      - 5500:5000
+    environment:
+      - "REGISTRY_HTTP_HEADERS_Access-Control-Origin=[http://0.0.0.0:5000]"
+      - "REGISTRY_HTTP_HEADERS_Access-Control-Allow-Methods=[HEAD,GET,OPTIONS,DELETE]"
+      - "REGISTRY_HTTP_HEADERS_Access-Control-Credentials=[true]"
+      - "REGISTRY_HTTP_HEADERS_Access-Control-Allow-Headers=[Authorization,Accept,Cache-Control]"
+      - "REGISTRY_HTTP_HEADERS_Access-Control-Expose-Headers=[Docker-Content-Digest]"
+      - "REGISTRY_STORAGE_DELETE_ENABLED=true"
+    volumes:
+      - ./registry/data:/var/lib/registry
+    networks:
+      - pozos_registry_network
+
 networks:
-    pozos_registry_network:
+  pozos_registry_network:
