@@ -5,16 +5,13 @@ FROM python:3.8-buster
 LABEL maintainer="Rabina AUGET"
 
 #Needed packages installation
-RUN DEBIAN_FRONTEND=noninteractive apt -o Acquire::Check-Valid-Until=false update --allow-releaseinfo-change -y && apt install python-dev python3-dev libsasl2-dev python-dev libldap2-dev libssl-dev -y
+RUN DEBIAN_FRONTEND=noninteractive apt -o Acquire::Check-Valid-Until=false update --allow-releaseinfo-change -y && apt install python-dev python3-dev libsasl2-dev python-dev libldap2-dev libssl-dev -y && apt clean -y
 
-#Definition of the work directory
-WORKDIR /
+#COPY API requirement file
+COPY requirements.txt student_age.json student_age.py  /
 
-#Code source add from github
-RUN git clone https://github.com/diranetafen/student-list.git
-
-#Installation launch
-RUN pip3 install -r /student-list/simple_api/requirements.txt
+#Installation launch & clean the temp directory after the installation
+RUN pip3 install -r /requirements.txt && rm -rf /root/.cache/pip/*
 
 #Persistent data
 VOLUME /data
@@ -23,4 +20,4 @@ VOLUME /data
 EXPOSE 5000
 
 #running student_age.py
-CMD [ "python3", "/student-list/simple_api/student_age.py" ]
+CMD [ "python3", "/student_age.py" ]
