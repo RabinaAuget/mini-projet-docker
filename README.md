@@ -101,14 +101,14 @@ And I can't completely delete the image in question because it's still going to 
 1. After deleting the container and image, we created the docker-compose.yml file (you'll find it in the repository), which we'll use to deploy/manage/bind together the frontend in an API-dependent way.
 Let's launch it:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/c5057c53-cebb-4385-8ca1-b7ab76b3445c)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/ab912220-a272-42f7-a9be-77960402ff63)
 
 Here we can see that the API and Frontend containers have been created, as well as the mini-project_pozos_network we declared in the docker-compose file.
 The -d option is used to launch containers in the background.
 
 2. Let's check that the containers have been launched using the "docker ps" command:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/f4bc44e7-335f-4715-85a1-758de787949f)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/ff8ab2fb-a1f1-4d64-812a-95e9d998b63a)
 
 We can see that containers are running and the frontend is listening on port 80.
 
