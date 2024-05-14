@@ -146,41 +146,45 @@ The application is working properly.
 
 3. Let's check from a browser that the UI is accessible:
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/b1bf3ad6-df84-4c48-82ea-163e91ce1bd5)
-
-4. We can now push our images into the registry. First, we need to consult the list of images with the "docker images" command to find out which image we're going to push so that we can tag it.
-
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/32602c82-1655-49c7-99b3-bdd1a2722a9d)
-
-5. Then tag the images like this:
-
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/cd2ad82e-2bf5-47d7-b6af-c90e552122e0)
-
-6. Let's check that the images have been tagged:
-
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/40054681-f901-4441-b643-8eed005772fd)
-
-We can see that image names are now prefixed with "localhost:5000".
-
-7. We can now push images via docker push like this. We can see here that I already have some of the image's layers in the register, as I'd already done some testing.
-
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/83c98b16-c7f1-4441-8ca6-d0d9238ffef2)
-
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/c29bd6d2-79a0-4f6b-ae0b-8e2bd24ce2bf)
-
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/a4e50726-fedf-41bd-bc22-c66f25ccdf02)
-
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/be4077c0-a564-4e8b-afb7-16c4f3c650c4)
-
-8. Now we can see from the browser that the images have been pushed.
-
 But first, we need to add port forwarding in the virtual machine configuration to access the containerised UI from our physical host. To do this, go to virtual machine configuration > Network > Port forwarding:
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/f3e7ebe9-b306-452a-9fd4-b733d38bb328)
 
 The registry and the UI are working properly.
 
-![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/8777f093-8d72-47fc-b600-aa084e9aa245)
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/b1bf3ad6-df84-4c48-82ea-163e91ce1bd5)
+
+4. We can now push our images into the registry. First, we need to consult the list of images with the "docker images" command to find out which image we're going to push so that we can tag it.
+
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/ebcdf2aa-ff7c-4dde-a25c-a4cc8ac01f74)
+
+5. Then tag the images like this:
+
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/e3a8c1d4-f8b4-44c7-95c4-0f7c0c89a259)
+
+6. Let's check that the images have been tagged:
+
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/0e479deb-9a51-4cbe-8a0f-41cb88d3a634)
+
+We can see that image names are now prefixed with "localhost:5000".
+
+7. We can now push images via docker push like this. We can see here that I already have some of the image's layers in the register, as I'd already done some testing.
+
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/34426492-982c-4b7f-851d-59f636efe06e)
+
+And we push all the images we've just tagged in the same way.
+
+8. Now we can see from the browser that the images have been pushed.
+
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/a5a71b29-f62f-48f7-b13d-81144408242b)
+
+For example, you can click on a docker image and get all the details about that image.
+
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/39dad0b7-7595-442c-b215-55edd20ba54f)
+
+Then click on History for a more detailed view of the image. Then click on History to get a more detailed view of the image, and it's even possible to see the contents of the Dockerfile used to create the image.
+
+![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/31dcbf98-fc6d-4639-b9ab-c7d6a4465023)
 
 # Conclusion
 
