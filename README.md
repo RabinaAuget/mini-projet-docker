@@ -63,31 +63,31 @@ For this project, I will use the following technologies:
 
    + mkdir mini-projet
    + cd mini-projet
-   + touch Dockerfile
+   + git clone the repository
+   + cd student_list/simple_api
+   + nano Dockerfile (To describe the steps involved in creating a docker image)
 
-2. Creating the Dockerfile with the command: touch Dockerfile
-
-3. Build the image from Dockerfile
+2. Once we have created the dockerfile, bwe have to build the image:
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/ec46802b-bdf7-4067-b8ff-15491cc001bd)
 
-4.Let's check that the image has been created correctly:
+3.Let's check that the image has been created correctly:
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/b7bd6d36-1f4c-4092-be8d-f37061e72dd5)
 
-5. We're now going to start the docker container from the image we've just created on port 5000:
+4. We're now going to start the docker container from the image we've just created on port 5000:
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/8e3862e9-a3bb-416c-9ecb-deef969e7ee6)
 
-6. Let's check that the container has been launched:
+5. Let's check that the container has been launched:
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/01baf04d-b0b5-4458-ac90-7f900b11c038)
 
-7. Now, let's confirm that the API is working.We can make a request to the container from the physical host, specifying the user name and password supplied by the development team.
+6. Now, let's confirm that the API is working.We can make a request to the container from the physical host, specifying the user name and password supplied by the development team.
 
 ![image](https://github.com/rabinauget/mini-projet-docker/assets/61904489/c5a0f123-ff20-4063-83e2-5e4ac04975a5)
 
-8. We can now move on to creating the docker compose file to deploy the API and Frontend. To start afresh, we'll delete the container we've created.
+7. We can now move on to creating the docker compose file to deploy the API and Frontend. To start afresh, we'll delete the container we've created.
 
 Note that we can remove containers or images easily by indicating only the first three characters of the ID.
 
