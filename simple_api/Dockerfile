@@ -8,7 +8,7 @@ LABEL maintainer="Rabina AUGET"
 RUN DEBIAN_FRONTEND=noninteractive apt -o Acquire::Check-Valid-Until=false update --allow-releaseinfo-change -y && apt install python-dev python3-dev libsasl2-dev python-dev libldap2-dev libssl-dev -y && apt clean -y
 
 #COPY API requirement file
-COPY requirements.txt student_age.json student_age.py  /
+COPY requirements.txt student_age.py  /
 
 #Installation launch & clean the temp directory after the installation
 RUN pip3 install -r /requirements.txt && rm -rf /root/.cache/pip/*
