@@ -19,8 +19,6 @@ services:
   pozos_api:
     image: pozos_api_image:latest
     container_name: pozos_api
-    ports:
-      - '5000:5000'
     volumes:
       - ./simple_api/student_age.json:/data/student_age.json
     networks:
